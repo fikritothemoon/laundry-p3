@@ -36,6 +36,19 @@ class PaketController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'outlet_id' => 'required',
+            'jenis' => 'required',
+            'nama_paket' => 'required',
+            'harga' => 'required',
+        ]);
+        Paket::create([
+            'outlet_id' =>$request->outlet_id,
+            'jenis' =>$request->jenis,
+            'nama_paket' =>$request->nama_paket,
+            'harga' =>$request->harga,
+        ]);
+        return redirect('/paket');
     }
 
     /**
@@ -47,6 +60,8 @@ class PaketController extends Controller
     public function show(Paket $paket)
     {
         //
+        $paket = Paket::find($paket->id);
+        return view('paket.show', compact('paket'));
     }
 
     /**

@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Outlet extends Model
 {
     use HasFactory;
+    protected $table = 'outlets';
+    protected $fillable = [
+        'nama', 'alamat', 'tlp'
+    ];
 }
