@@ -1,43 +1,51 @@
 @extends('template.master')
 
 @section('judul')
-<h1> Outlet </h1>
+<h1>Create Paket</h1>
 @endsection
 
 @section('content')
 <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h3 class="card-title">Menambahkan Data</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="/paket" method="POST">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Outlet id</label>
-                    <input type="text" name="outlet_id">
+                  <label> Id Outlet </label>
+                    <br>
+                    <select class="form-select" arial-label="Default select example" name="outlet_id">
+                      <option selected>Open this select menu</option>
+                      @foreach ($outlet as $item)
+                      <option value="{{ $item->id}}">{{ $item->id }}</option>
+                      @endforeach
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                  <label> Jenis Paket </label>
+                    <br>
+                    <select name="jenis" id="jenis">
+                      <option selected>Open this select menu</option>
+                      <option value="kiloan">Kiloan</option>
+                      <option value="selimut">Selimut</option>
+                      <option value="bed_cover">Bed Cover</option>
+                      <option value="kaos">Kaos</option>
+                      <option value="jenis">Lainnya</option>
+                    </select>
+                  </div>
+                 
+                  <div class="form-group">
+                    <label for="harga_awal">Nama Paket</label>
+                    <input type="text" name="nama_paket" class="form-control" id="nama_paket" placeholder="Masukan Nama Paket">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="harga_awal">Harga</label>
+                    <input type="text" name="harga" class="form-control" id="harga" placeholder="Masukan Harga Awal">
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
-                </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">

@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        <select class="form-select" aria-label="Default select example" name="outlet_id">
+        <select class="form-control" aria-label="Default select example" name="outlet_id">
         <option selected>Open this select menu</option>
             @foreach($outlets as $item)
             <option value="{{$item->id}}">{{ $item->id }}</option>

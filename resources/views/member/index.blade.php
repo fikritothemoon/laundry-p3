@@ -1,10 +1,10 @@
 @extends('template.master')
 
 @section('judul')
-<h1> Halaman Outlet </h1>
+ <h1> Halaman Member </h1>
 @endsection
 
-@section('content')   
+@section('content')    
 <div class="card">
     <div class="card-header">
     <div class="card-tools">
@@ -15,49 +15,49 @@
               <i class="fas fa-times"></i>
             </button>
           </div>
-      <h3 class="card-title">Data Outlet</h3>
+      <h3 class="card-title">Data Member</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-    <a href="outlet/create" class="btn btn-info mb-3">
+    <a href="member/create" class="btn btn-info mb-3">
           <i class="fas fa-plus"></i>
            Create
         </a>
       <table id="example2" class="table table-bordered table-hover">
         <thead>
-        <tr>
-          <th>No</th>
-          <th>Nama</th>
-          <th>Alamat</th>
-          <th>Telepon</th>
-          <th>Actions</th>
-        </tr>
+    <tr>
+        <td class="td1">No</td>
+        <td class="td5">Nama</td>
+        <td class="td3">Alamat</td>
+        <td class="td2">telepon</td>
+        <td class="td4">Jenis Kelamin</td>
+        <td class="td4">Action</td>
+    </tr>
         </thead>
         <tbody>
-          @forelse($outlet as $outlet)
-         <tr>
-          <td>{{ $loop->iteration }}</td>
-          <td>{{ $outlet->nama }}</td>
-          <td>{{ $outlet->alamat }}</td>
-          <td>{{ $outlet->tlp }}</td>
-          <td>
-          <form action="{{ route ('outlet.destroy', [$outlet->id])}}" method="POST">
-              <a class="btn btn-info mr-3" href="outlet/{{$outlet->id}}">
-              <i class="fas fa-exclamation-circle"></i>
+            <tr>
+          @forelse($member as $member)
+          <th class="th1">{{ $loop->iteration}}</th>
+            <td class="th2">{{ $member->nama }}</td>
+            <td class="th3">{{ $member->alamat }}</td>
+            <td class="th2">{{ $member->tlp }}</td>
+            <td class="th2">{{ $member->jenis_kelamin }}</td>
+            <td class="th4">
+          <form action="{{ route ('member.destroy', [$member->id])}}" method="POST">
+              <a class="btn btn-info mr-3" href="member/{{$member->id}}">
+                <i class="fas fa-info-circle"></i>
                 Detail
               </a>
-              <a class="btn btn-warning mr-3" href="outlet/{{$outlet->id}}/edit">
+              <a class="btn btn-warning mr-3" href="member/{{$member->id}}/edit">
               <i class="far fa-edit"></i> 
-                Edit
+              Edit
               </a>
             @csrf
             @method('DELETE')
            <button type="submit" class="btn btn-danger" value="Delete">
            <i class="fas fa-solid fa-trash"></i>
-           Delete
+            Delete
            </button>
-           
-           
           </form>
             </td>
          </tr>
@@ -79,9 +79,9 @@
 
 <script>
     $(function () {
-     $('#data-outlet').DataOutlet();
+     $('#data-member').DataMember();
         
-      $('#example2').DataOutlet({
+      $('#example2').DataMember({
         "paging": true,
         "lengthChange": true,
         "searching": true,

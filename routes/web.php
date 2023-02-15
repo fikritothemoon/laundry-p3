@@ -6,6 +6,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\OutletController;
 use App\Http\Controllers\PaketController;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,11 +34,14 @@ Route::post('login', [LoginController::class, 'proses'])->name('login.proses')->
 
 Route::get('logout', [LoginController::class, 'logout'])->name('logout.admin');
 
-Route::get('dashboard/admin', [DashboardController::class, 'admin'])->name('dashboard.admin')->middleware('auth');
+Route::get('dashboard/admin', [DashboardController::class, 'admin'])->name('dashboard.admin')->middleware('auth', 'role:admin');
 Route::get('dashboard/kasir', [DashboardController::class, 'kasir'])->name('dashboard.kasir')->middleware('auth');
 Route::get('dashboard/owner', [DashboardController::class, 'owner'])->name('dashboard.owner')->middleware('auth');
+
 
 Route::view('error/403', 'error.403')->name('error.403');
 
 Route::resource('outlet', OutletController::class);
 Route::resource('paket', PaketController::class);
+Route::resource('member', MemberController::class);
+Route::resource('transaksi', TransaksiController::class);

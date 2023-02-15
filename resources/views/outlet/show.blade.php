@@ -1,13 +1,13 @@
 @extends('template.master')
 
 @section('judul')
-    <h1>Ini Halaman Kelas</h1>
+    <h1>Halaman Detail</h1>
 @endsection
 
 @section ('content')
 <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Info Konfirmasi</h3>
+                <h3 class="card-title">Detail Outlet</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -33,7 +33,11 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                <a class="btn btn-primary" href="/outlet">Back</a>
+              <a class="btn btn-primary" href="/outlet">
+                <i class="nav-icon fas fa-solid fa-arrow-left"></i>
+                Kembali
+              </a>
+
                 </div>
               </form>
             </div>

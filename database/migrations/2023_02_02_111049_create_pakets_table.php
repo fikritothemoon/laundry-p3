@@ -18,7 +18,7 @@ class CreatePaketsTable extends Migration
             $table->foreignId('outlet_id')->constrained('outlets');
             $table->enum('jenis', ['kiloan', 'selimut', 'bed_cover', 'kaos', 'lain']);
             $table->string('nama_paket', 100);
-            $table->string('harga');
+            $table->integer('harga');
             $table->timestamps();
         });
     }
