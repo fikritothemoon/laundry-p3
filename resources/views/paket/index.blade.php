@@ -27,8 +27,8 @@
         <thead>
         <tr>
           <th>No</th>
-          <th>Outlet Id</th>
-          <th>Jenis Paket</th>
+          <th>Nama Outlet</th>
+          <th>Jenis</th>
           <th>Nama Paket</th>
           <th>Harga</th>
           <th>Actions</th>
@@ -54,6 +54,7 @@
               </a>
             @csrf
             @method('DELETE')
+            
            <button type="submit" class="btn btn-danger" value="Delete">
            <i class="fas fa-solid fa-trash"></i>
             Delete

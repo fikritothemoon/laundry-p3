@@ -15,12 +15,12 @@
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
-                  <label> Id Outlet </label>
+                  <label> Nama Outlet </label>
                     <br>
-                    <select class="form-select" arial-label="Default select example" name="outlet_id">
+                    <select class="form-control" arial-label="Default select example" name="outlet_id">
                       <option selected>Open this select menu</option>
                       @foreach ($outlet as $item)
-                      <option value="{{ $item->id}}">{{ $item->id }}</option>
+                      <option value="{{ $item->id}}">{{ $item->nama. '  |  ' . $item->alamat }}</option>
                       @endforeach
                     </select>
                   </div>
@@ -28,7 +28,7 @@
                   <div class="form-group">
                   <label> Jenis Paket </label>
                     <br>
-                    <select name="jenis" id="jenis">
+                    <select name="jenis" class="form-control" id="jenis">
                       <option selected>Open this select menu</option>
                       <option value="kiloan">Kiloan</option>
                       <option value="selimut">Selimut</option>
@@ -49,7 +49,8 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Save</button>
+                 <button type="reset" class="btn btn-primary"> Reset</button>
                 </div>
               </form>
             </div>

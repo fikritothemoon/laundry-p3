@@ -26,24 +26,32 @@
       <table id="example2" class="table table-bordered table-hover">
         <thead>
     <tr>
-        <td class="td1">No</td>
-        <td class="td5">Outlet Id</td>
-        <td class="td3">Kode Invoice</td>
-        <td class="td2">Tanggal</td>
-        <td class="td4">Status</td>
-        <td class="td4">Dibayar</td>
-        <td class="td4">Action</td>
+        <td>No</td>
+        <td>Nama Member</td>
+        <td>Nama Outlet</td>
+        <td>Jenis Paket</td>
+        <td>Total Bayar</td>
+        <td>Status</td>
+        <td>Dibayar</td>
+        <td>Action</td>
     </tr>
         </thead>
         <tbody>
             <tr>
           @forelse($transaksi as $transaksi)
-          <th class="th1">{{ $loop->iteration}}</th>
-            <td class="th2">{{ $transaksi->outlet_id }}</td>
-            <td class="th3">{{ $transaksi->kode_invoice }}</td>
-            <td class="th2">{{ $transaksi->tgl}}</td>
-            <td class="th2">{{ $transaksi->status}}</td>
-            <td class="th2">{{ $transaksi->dibayar}}</td>
+          <th>{{ $loop->iteration}}</th>
+            <td>{{ $outlet_id->outlet_id }}</td>
+            <td>{{ $member_id->member_id }}</td>
+            <td>{{ $transaksi->tgl}}</td>
+            <td>{{ $transaksi->batas_waktu}}</td>
+            <td>{{ $paket->outlet_id }}</td>
+            <td>{{ $transaksi->tgl_bayar}}</td>
+            <td>{{ $transaksi->biaya_tambahan}}</td>
+            <td>{{ $transaksi->diskon}}</td>
+            <td>{{ $transaksi->pajak}}</td>
+            <td>{{ $transaksi->status}}</td>
+            <td>{{ $transaksi->dibayar}}</td>
+            <td>{{ $user_id->user_id }}</td>
             <td class="th4">
           <form action="{{ route ('transaksi.destroy', [$transaksi->id])}}" method="POST">
               <a class="btn btn-info mr-3" href="transaksi/{{$transaksi->id}}">

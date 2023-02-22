@@ -1,9 +1,9 @@
 <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
+    <!-- <a href="../../index3.html" class="brand-link">
       <img src="{{ asset('adminlte/dist/img/laudry1.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">LAUDRY</span>
-    </a>
+      <span class="d-blok">LAUDRY</span>
+    </a> -->
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -13,7 +13,7 @@
           <img src="{{ asset('adminlte/dist/img/admin.png') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">ADMIN</a>
+          <a href="#" class="d-block">LAUDRY</a>
         </div>
       </div>
 
@@ -42,7 +42,25 @@
               </p>
             </a>
           </li>
-          <li class="nav-header">WILAYAH OUTLET NICH</li>
+          <li class="nav-item">
+            <a href="/dashboard/owner" class="nav-link">
+              <i class="nav-icon fas fa-sharp fa-solid fa-user-tie"></i>
+              <p>
+                Owner
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/dashboard/kasir" class="nav-link">
+              <i class="nav-icon fas fa-sharp fa-solid fa-user-tie"></i>
+              <p>
+                Kasir
+              </p>
+            </a>
+          </li>
+
+
+          <!-- <li class="nav-header">WILAYAH OUTLET NICH</li>
           <li class="nav-item">
             <a href="/outlet" class="nav-link">
               <i class="nav-icon far fa-building"></i>
@@ -80,13 +98,15 @@
                 Transaksi
               </p>
             </a>
-          </li>
+          </li> -->
           <br>
+         
             <li class="nav-item">
                 <a href="{{ route('logout.admin') }}" class="nav-link">
                   <i class="nav icon fas fa-sign-out-alt"> Logout </i>
                 </a>
               </li>
+  
           </li>
         </ul>
       </nav>
