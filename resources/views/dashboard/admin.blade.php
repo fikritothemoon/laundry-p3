@@ -9,12 +9,13 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3> Wilayah Outlet</h3>
-
-                <p>New Outlet</p>
+                <h2>Outlet</h2>
+                <br>
+                <p></p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion fa-solid fa-swatchbook"></i>
+
               </div>
               <a href="/outlet" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -24,9 +25,9 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>Wilayah Paket<sup style="font-size: 20px"></sup></h3>
-
-                <p>New Paket</p>
+                <h2>Paket<sup style="font-size: 20px"></sup></h2>
+                <br>
+                <p></p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -39,9 +40,9 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>Wilayah Member</h3>
-
-                <p>New Member</p>
+                <h2>Member</h2>
+                <br>
+                <p></p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -54,9 +55,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>Wilayah Transaksi</h3>
-
-                <p>New Transaksi</p>
+                <h2>Transaksi</h2>
+              <br>
+                <p></p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -64,6 +65,7 @@
               <a href="/transaksi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+          
     </section>
 
     @endsection

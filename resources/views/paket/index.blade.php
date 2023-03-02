@@ -38,7 +38,7 @@
           @forelse($paket as $paket)
          <tr>
           <td>{{ $loop->iteration }}</td>
-          <td>{{ $paket->outlet_id }}</td>
+          
           <td>{{ $paket->jenis }}</td>
           <td>{{ $paket->nama_paket }}</td>
           <td>{{ $paket->harga }}</td>
